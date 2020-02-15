@@ -50,4 +50,26 @@ print(country)
 
 country.sort(by:  > )
 
-country.max()
+var  s = country.map{(str)->String in
+    if str.count == 5
+    {
+        return str
+        
+    }
+    return String() // it will display the string with char count =5 and all other with empty Stringd
+}
+print(s)
+
+s = country.map{(str)-> String in
+    return "\(str.count) - \(str)" // it will display the elements with its char count
+}
+
+print(s)
+
+s = country.filter{(str ) -> Bool in return str.count == 5}//filter vthe elements with str char =5
+print(s)
+
+country .remove(at: 1)
+print(country)// remove the character at index 1
+
+country.
