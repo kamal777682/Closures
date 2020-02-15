@@ -24,3 +24,30 @@ func test (a : Int, b :(Int , Int)-> Void)
 }
 
 test( a: 41 , b: f)
+
+var country = ["CANADA","abd","INDIA","CHINA","NEPAL","USA"]
+func compare( a: String ,b: String)->Bool
+{
+    return  a > b
+}
+//print(compare(a: "abc", b: "aac"))
+//print(country)
+country.sort(by:
+    {(a : String , b : String)-> Bool in return a>b}) // closures creation
+print(country)
+country.sort(by:
+{(a, b)-> Bool in return a<b})
+print(country)
+
+country.sort(by:
+{ a , b  in return a>b}) //print (c)
+print(country)
+
+country.sort(by: {
+    return $0 > $1
+})
+print(country)
+
+country.sort(by:  > )
+
+country.max()
